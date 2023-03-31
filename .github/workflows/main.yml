@@ -36,12 +36,12 @@ jobs:
           cat >> difference.sh <<END
             frontend=0
             backend=1
-          echo "backend=$backend" >> $GITHUB_OUTPUT
-          echo "frontend=$backend" >> $GITHUB_OUTPUT
+            echo "backend=$backend" >> $GITHUB_OUTPUT
+            echo "frontend=$backend" >> $GITHUB_OUTPUT
           END
           chmod +x difference.sh
           source ./difference.sh
           
       - name: print
-        if: ${{ steps.filess.outputs.backend  == 1 }}
+        if: ${{ steps.filess.outputs.backend == 1 }}
         run: echo "HELLO"
