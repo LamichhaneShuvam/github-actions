@@ -45,5 +45,5 @@ jobs:
           echo "frontend=$FRONTEND" >> $GITHUB_OUTPUT
           
       - name: print
-        if: ${{ steps.filess.outputs.backend }} == 0
+        if: ${{ steps.filess.outputs.backend }} == 1
         run: echo "HELLO"
