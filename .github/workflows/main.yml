@@ -38,7 +38,7 @@ jobs:
             backend=1
             export BACKEND=$backend
             export FRONTEND=$frontend
-            echo "backend='$backend'" >> $GITHUB_OUTPUT
+            echo "backend=backend" >> $GITHUB_OUTPUT
           END
           chmod +x difference.sh
           ./difference.sh
