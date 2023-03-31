@@ -45,9 +45,12 @@ jobs:
               echo "Changes present in backend"
               backend=1
             fi
-            echo "BACKEND=$backend" >> $GITHUB_OUTPUT
-            echo "FRONTEND=$frontend" >> $GITHUB_OUTPUT
+            export BACKEND=$backend
+            export FRONTEND=frontend
           END
+          echo $BACKEND
+          echo $FRONTEND
+          
           
       - name: print
         run: echo ${{ steps.filess.outputs.BACKEND }}
