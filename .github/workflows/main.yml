@@ -40,7 +40,7 @@ jobs:
             export FRONTEND=frontend
           END
           chmod +x difference.sh
-          ./difference.sh
+          source ./difference.sh
           echo $BACKEND
           echo $FRONTEND
           
