@@ -37,7 +37,7 @@ jobs:
             #!/bin/bash
             
             frontend=0
-            backend=1
+            backend=0
             export BACKEND=$backend
             export FRONTEND=$frontend
           END
