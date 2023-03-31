@@ -33,16 +33,9 @@ jobs:
       - name: files
         id: filess
         run: |
-          cat >> difference.sh <<END
-            frontend=0
-            backend=1
-            export BACKEND=$backend
-            export FRONTEND=$frontend
-            echo "backend=backend" >> $GITHUB_OUTPUT
-          END
-          chmod +x difference.sh
-          ./difference.sh
-          echo "frontend=$FRONTEND" >> $GITHUB_OUTPUT
+          frontend=0
+          backend=1
+          echo "$backend" >> $GITHUB_OUTPUT
           
       - name: print
         if: ${{ steps.filess.outputs.backend == 1 }}
