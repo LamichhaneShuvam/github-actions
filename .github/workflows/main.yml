@@ -35,7 +35,7 @@ jobs:
         run: |
           cat >> difference.sh <<END
             frontend=0
-            backend=0
+            backend=1
             echo "backend=$backend" >> $GITHUB_OUTPUT
             echo "frontend=$backend" >> $GITHUB_OUTPUT
           END
