@@ -34,8 +34,6 @@ jobs:
         id: filess
         run: |
           cat >> difference.sh <<END
-            #!/bin/bash
-            
             frontend=0
             backend=1
             export BACKEND=$backend
