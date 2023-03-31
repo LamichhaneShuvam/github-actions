@@ -37,12 +37,12 @@ jobs:
             frontend=0
             backend=0
             export BACKEND=$backend
-            export FRONTEND=frontend
+            export FRONTEND=$frontend
           END
           chmod +x difference.sh
           source ./difference.sh
-          echo $BACKEND
-          echo $FRONTEND
+          "backend=(echo $BACKEND)" >> $GITHUB_OUTPUT
+          "frontend=(echo $FRONTEND") >> $GITHUB_OUTPUT
           
       - name: print
-        run: echo ${{ steps.filess.outputs.BACKEND }}
+        run: echo ${{ steps.filess.outputs.backend }}
