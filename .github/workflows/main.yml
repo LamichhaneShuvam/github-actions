@@ -41,8 +41,8 @@ jobs:
           END
           chmod +x difference.sh
           source ./difference.sh
-          "backend=(echo $BACKEND)" >> $GITHUB_OUTPUT
-          "frontend=(echo $FRONTEND") >> $GITHUB_OUTPUT
+          echo "backend=$BACKEND" >> $GITHUB_OUTPUT
+          echo "frontend=$FRONTEND" >> $GITHUB_OUTPUT
           
       - name: print
         run: echo ${{ steps.filess.outputs.backend }}
