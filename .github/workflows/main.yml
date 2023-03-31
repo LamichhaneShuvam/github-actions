@@ -35,7 +35,7 @@ jobs:
         run: |
           frontend=0
           backend=1
-          echo "$backend" >> $GITHUB_OUTPUT
+          echo "backend=$backend" >> $GITHUB_OUTPUT
           
       - name: print
         if: ${{ steps.filess.outputs.backend == 1 }}
