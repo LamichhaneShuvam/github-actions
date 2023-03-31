@@ -39,6 +39,8 @@ jobs:
             export BACKEND=$backend
             export FRONTEND=frontend
           END
+          chmod +x difference.sh
+          ./difference.sh
           echo $BACKEND
           echo $FRONTEND
           
